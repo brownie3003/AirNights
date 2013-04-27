@@ -15,7 +15,7 @@
 	<%= date_select :guide, :birth_date, start_year: 1950, use_short_month: true %>
 
 	<%= f.label :location, "Location" %>
-	<%= f.select :location, ["London", "Berlin", "Rio"] %>
+	<%= f.select :location, Location.find(:all).map(&:location) %>
 
 	</br>
 

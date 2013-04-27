@@ -3,11 +3,21 @@
 	<div class="search">
     	<h1>Enjoy authentic night life</h1>
 
-    	<form>
-    		<input type="text" name="location" placeholder="Where are you now">
-    		<input type="text" name="partydate" placeholder="When do you want to party">
-    		<input type="text" name="groupsize" placeholder="How many of you are there">
-    	</form>
+    		<%= form_tag guides_path, method: 'get' do %>	
+    			<p>Where do you want to party 
+    				<%= select_tag :location, options_for_select(Location.find(:all).map(&:location)) %>	
+    			</p>
+    			<!--
+    			<p>When 
+    				<%= date_select "party_date", discard_year: true %> 
+    			</p>
+    			<p>Number of tourists 
+    				<%= select_tag(:location, options_for_select([1,2,3,4])) %>
+    			</p>
+    			-->
+    			<%= submit_tag("Search", name: nil, class: "btn btn-large brn-primary") %>
+    		<% end %>
+
     	<div class="learn">
     		<p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
     	</div>

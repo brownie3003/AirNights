@@ -7,9 +7,10 @@ body {
 
 /* Typography */
 
-.hero-image h1 {
+.hero-image h1,.hero-image h2,.hero-image h3,.hero-image h4,.hero-image p {
 	color: white;
 }
+
 
 .hero-image p {
 	color: white;
@@ -28,10 +29,14 @@ body {
 }
 
 .search {
-	padding-top: 100px;
+	padding-top: 50px;
 	padding-left: 100px;
 }
 
 .search form {
 	color: white;
+}
+
+.learn {
+	padding-top: 25px;
 }
