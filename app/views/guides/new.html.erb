@@ -1,0 +1,24 @@
+<h1> Become a Guide </h1>
+ 
+<%= form_for(@guide) do |f| %>
+
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name %>
+
+	<%= f.label :email %>
+    <%= f.text_field :email %>
+
+	<%= f.label :sex, "Sex" %>
+	<%= f.select :sex, ["Male", "Female", "Prefer not to say"] %>
+
+	<%= f.label :birth_date, "Date of Birth" %>
+	<%= date_select :guide, :birth_date, start_year: 1950, use_short_month: true %>
+
+	<%= f.label :location, "Location" %>
+	<%= f.select :location, ["London", "Berlin", "Rio"] %>
+
+	</br>
+
+	<%= f.submit "Sign up", class: "btn btn-large brn-primary" %>
+
+<% end %>
